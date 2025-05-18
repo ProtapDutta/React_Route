@@ -1,14 +1,14 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = ({ signout }: { signout: () => void }) => (
   <nav className="navbar navbar-expand navbar-light bg-success mb-3">
     <div className="container">
-      <Link className="navbar-brand" to="/menu">Home</Link>
+      <NavLink className="navbar-brand" to="/menu" style={({ isActive }) => ({ color: isActive ? 'white' : 'black' })}>Home</NavLink>
       <div className="navbar-nav">
-        <Link className="nav-link" to="/api-users">API Users</Link>
-        <Link className="nav-link" to="/new">New User</Link>
+        <NavLink className="nav-link" to="/api-users" style={({ isActive }) => ({ color: isActive ? 'white' : 'black' })}>API Users</NavLink>
+        <NavLink className="nav-link" to="/new" style={({ isActive }) => ({ color: isActive ? 'white' : 'black' })}>New User</NavLink>
       </div>
-      <button className="btn btn-danger ms-auto" onClick={signout}>Logout</button>
+      <button type="button" className="btn btn-danger ms-auto" onClick={signout}>Logout</button>
     </div>
   </nav>
 );
