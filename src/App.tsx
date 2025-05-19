@@ -1,9 +1,9 @@
-import Apidropdown from "./Api/Apidropdown";
+import Rules from "./Route/Rules";
 
 const App = () => {
   return (
    <>
-   <Apidropdown/>
+   <Rules/>
    </>
   );
 };
