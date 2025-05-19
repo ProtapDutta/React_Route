@@ -31,11 +31,11 @@ const Login: React.FC<LoginProps> = ({ signin }) => {
       <form>
         <div className="mb-3 mt-3">
           <label htmlFor="email">Email:</label>
-          <input type="email" className="form-control" onChange={valupd} placeholder="Enter email" name="email" />
+          <input type="email" className="form-control" onChange={valupd} placeholder="Enter admin@gmail.com" name="email" />
         </div>
         <div className="mb-3">
           <label htmlFor="pwd">Password:</label>
-          <input type="password" className="form-control" onChange={valupd} placeholder="Enter password" name="pswd" />
+          <input type="password" className="form-control" onChange={valupd} placeholder="Enter admin" name="pswd" />
         </div>
         <div>
           <h5 ref={ref1} className="invalid-credentials" style={{color:"red"}}></h5>
